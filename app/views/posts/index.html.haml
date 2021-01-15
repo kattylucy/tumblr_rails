@@ -1,1 +1,12 @@
 %h1 hey
+
+%div{class: "app-wrapper"}
+- @posts.each do |post|
+    %div{class:"post-card"}
+        %h2= link_to post.title, post
+
+
+%div{class:"footer"}
+    %p= link_to "Create new post", new_post_path
+        
+
