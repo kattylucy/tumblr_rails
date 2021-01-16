@@ -21,6 +21,16 @@ class PostsController < ApplicationController
         @post = find_post
     end
 
+    def edit
+        @post = find_post
+    end
+
+    def update
+        @post = find_post
+        if @post.update(post_params)
+            redirect_to post_path
+        end
+    end
 
     private
 

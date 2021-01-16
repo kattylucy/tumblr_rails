@@ -4,3 +4,5 @@
     %span= "Post was updated #{time_ago_in_words(@post.updated_at)} ago"
     %br/
     %span= "Created #{time_ago_in_words(@post.created_at)} ago"
+    %br/
+    %p= link_to "Edit your post", edit_post_path
