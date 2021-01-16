@@ -1,6 +1,13 @@
 %h1 Make something!
 
 = form_for :post, url: posts_path do |f|
+    - if @post.errors.any?
+        %div{id:"errors"}
+            %ul
+                - @post.errors.full_messages.each do |error|
+                    %li= error
+                    
+
     %p
         = f.label :title 
         %br/
