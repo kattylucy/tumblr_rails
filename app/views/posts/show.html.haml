@@ -6,3 +6,5 @@
     %span= "Created #{time_ago_in_words(@post.created_at)} ago"
     %br/
     %p= link_to "Edit your post", edit_post_path
+    %br
+    %p= link_to "Delete your post", post_path, method: :delete, data: { confirm: "are you sure?"}
