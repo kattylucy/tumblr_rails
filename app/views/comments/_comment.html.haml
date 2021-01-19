@@ -1,3 +1,4 @@
 %div
     %h5= comment.name
     %p= comment.body
+    %p= link_to "Delete comment", [comment.post, comment], method: :delete
