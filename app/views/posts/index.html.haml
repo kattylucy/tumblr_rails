@@ -6,5 +6,8 @@
 
 %div{class:"footer"}
     %p= link_to "Create new post", new_post_path
+
+%div
+    %p= link_to 'Sign out', destroy_user_session_path, method: :delete
         
 
