@@ -14,7 +14,7 @@
         = render 'comments/form'
         %br/
 
-    - if @user == current_user
+    - if (@user == current_user) && user_signed_in?
         %p= link_to "Edit your post", edit_post_path
         %br
         %p= link_to "Delete your post", post_path, method: :delete, data: { confirm: "are you sure?"}
